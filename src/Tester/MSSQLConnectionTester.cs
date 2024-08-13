@@ -1,13 +1,13 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace Checker;
+namespace Tester;
 
-internal class MSSQLDataProvider
+internal class MSSQLConnectionTester
 {
     private readonly string _connectionString;
 
-    public MSSQLDataProvider(string connectionString)
+    public MSSQLConnectionTester(string connectionString)
     {
         _connectionString = connectionString;
     }

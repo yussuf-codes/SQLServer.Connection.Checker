@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Checker;
+namespace Tester;
 
 internal static class Program
 {
@@ -8,9 +8,9 @@ internal static class Program
     {
         string connectionString = args[0];
 
-        MSSQLDataProvider provider = new MSSQLDataProvider(connectionString);
+        MSSQLConnectionTester tester = new MSSQLConnectionTester(connectionString);
 
-        DataTable databases = provider.GetDatabases();
+        DataTable databases = tester.GetDatabases();
 
         for (int i = 0; i < databases.Rows.Count; i++)
         {
@@ -20,7 +20,7 @@ internal static class Program
             System.Console.Write(System.Environment.NewLine);
         }
 
-        string version = provider.GetVersion();
+        string version = tester.GetVersion();
 
         System.Console.WriteLine(version);
     }
