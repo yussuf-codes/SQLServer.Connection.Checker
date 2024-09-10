@@ -1,4 +1,4 @@
-## SQLServer Connection Tester
+## SQL Server Connection Tester
 
 ### Run:
 ```
