@@ -2,5 +2,5 @@
 
 ### Run:
 ```
-    dotnet run --project Tester <connection string>
+dotnet run --project Tester <connection string>
 ```
